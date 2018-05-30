@@ -1,5 +1,7 @@
+html{
+  height: 100vh;
+}
 body{
-
   background: linear-gradient(45deg, rgb(19, 73, 95), rgb(118, 75, 226), rgb(131, 115, 198), rgb(119, 211, 185));
    background-repeat: no-repeat;
    background-position: center;
@@ -7,6 +9,18 @@ body{
 
 }
 
+ol {
+    margin-left: 0px;
+    padding: 0px;
+    font-weight: bold;
+
+}
+b{
+  display: inline-block;
+}
+.adjust {
+  overflow: hidden;
+}
 i {
   cursor: pointer;
 }
@@ -36,6 +50,7 @@ i {
   border-radius: 5px;
   margin-top: 2%;
   margin-bottom: 2%;
+
 }
 
 
@@ -43,6 +58,7 @@ i {
 .container{
  width: 29vw;
 min-width: 310px;
+
 
 }
 

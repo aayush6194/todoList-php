@@ -4,17 +4,22 @@ class  view extends tasks {
 
     public function showTasks () {
         $datas = $this->getTasks();
-
+      if($datas != false)
+      {
           foreach($datas as $data){
-              echo "<forum method='remove'><li >
-                <div class='collapsible-header full'>";
+              echo "<input type='hidden' name='remove' value='".$data['task']."'><div class='card-panel'><li>";
 
-            echo "<b>".$data['id'].". ".$data['task']."</b>";
-            echo "<button type='submit' class='btn-floating'><i class='material-icons'>check</i></button></div></li></forum> ";
+            echo "<b class='truncate'>".$data['task']."</b>";
+            echo "<a href='includes/removetask.php?taskselected=".$data['id']."'><button class='btn-floating right' ><i class='material-icons'>check</i></button></a></li></div> ";
           }
+        }
+        else{
+          echo "<div class='card-panel'>";
 
+
+        echo "No task. All caught up!</div> ";
+        }
     }
 }
-
 
 ?>

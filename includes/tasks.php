@@ -4,7 +4,7 @@ class  tasks extends db {
 
     public function getTasks () {
 
-        $sql = "SELECT * FROM todolist";
+        $sql = "SELECT * FROM todolist ORDER BY id  DESC LIMIT 6 ";
         $result = $this->connect()->query($sql);
 
         $numRows = $result->num_rows;
@@ -14,6 +14,9 @@ class  tasks extends db {
             $data[] = $row;
           }
           return $data;
+        }
+        else {
+          return false;
         }
     }
 }

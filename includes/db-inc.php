@@ -18,5 +18,9 @@ class  db {
     }
 }
 
+// 1. Login authorization.
+// 2. Display task corresponding to the user (session ="logged in" sesson"user").
+// 3.  safegaurd sql injection/prepared statements.
+// 4. Prevent auto submit on page reload.
 
 ?>

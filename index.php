@@ -31,35 +31,37 @@
 
         </tbody>
     </table>
+  <div class="valign">
+      <div class="wrapper ">
+        <div class="container small">
+          <header>
+            <nav>
+              <div class="nav-wrapper">
+                <ul id="nav-mobile" class="">
+                  <li><a class="active" href="index.php">Home</a></li>
+                  <li><a href="profile.php">Profile</a></li>
+                </ul>
+                <i class="material-icons right">settings</i>
+              </div>
+            </nav>
+          </header>
 
-    <div class="wrapper valign-wrapper">
-      <div class="container small">
-        <header>
-          <nav>
-            <div class="nav-wrapper">
-              <ul id="nav-mobile" class="">
-                <li><a class="active" href="sass.html">Home</a></li>
-                <li><a href="badges.html">Profile</a></li>
-              </ul>
-              <i class="material-icons right">settings</i>
-            </div>
-          </nav>
-        </header>
+        <ol class="collapsible">
 
-      <ul class="collapsible">
+          <?php  $tasks = new view();
+            $tasks->showTasks();
+            ?>
+        </ol>
 
-        <?php  $tasks = new view();
-          $tasks->showTasks();
-          ?>
-      </ul>
+          <form method="POST">
+               <input type="text" value="" name="task" placeholder="Enter a task...">
+               <button type="submit" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons right">add</i></button>
+          </form>
 
-        <form method="POST">
-             <input type="text" value="" name="task" placeholder="Enter a task...">
-             <button type="submit" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons right">add</i></button>
-        </form>
-
+        </div>
       </div>
-    </div>
+  </div>
+
 
     <?php
     if(isset($_POST['task']))
@@ -68,6 +70,13 @@
 
        $users = new add();
        $users->addtask($task);
+    }
+
+    if(isset($_POST['remove']))
+    {
+
+
+     echo "<script>console.log('ssdsdsd');</script>";
     }
      ?>
 

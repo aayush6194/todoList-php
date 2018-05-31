@@ -1,10 +1,10 @@
 <?php
-
 class components {
 
   public function nav() {
     return '<nav>
             <div class="nav-wrapper  red lighten-1">
+            <div class="heading">TODO LIST</div>
              </div>
             </nav>';
   }
@@ -22,6 +22,22 @@ class components {
             </nav>
           </header>';
   }
+
+  public function nav2LoggedIn ($arg1, $arg2, $name) {
+    return '<header>
+            <nav>
+              <div class="nav-wrapper  red lighten-1">
+                <ul id="nav-mobile" class="">
+                  <li><a href="index.php" >'.$arg1.'</a></li>
+                  <li><a href="profile.php">'.$arg2.'</a></li>
+                </ul>
+                <i class="material-icons right">settings</i>
+                <span class="right">Hello, '.ucfirst($name).'!</span>
+              </div>
+            </nav>
+          </header>';
+  }
+
 
   public function search(){
     return '  <form action="includes/search.php">

@@ -10,7 +10,7 @@ class  view extends tasks {
               echo "<input type='hidden' name='remove' value='".$data['task']."'><div class='card-panel'><li>";
 
             echo "<b class='truncate'>".$data['task']."</b>";
-            echo "<a href='includes/remove.php?taskselected=".$data['id']."'><button class='btn-floating right' ><i class='material-icons'>check</i></button></a></li></div> ";
+            echo "<a href='includes/remove.php?taskselected=".$data['id']."'><button class='btn-floating right hoverable' ><i class='material-icons'>check</i></button></a></li></div> ";
           }
         }
         else{

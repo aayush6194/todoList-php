@@ -16,6 +16,7 @@ a , a:visited{
 .logo{
   width: 50%;
   height: auto;
+  cursor: pointer;
 }
 ol {
     margin-left: 0px;
@@ -68,9 +69,12 @@ i {
  min-width: 310px;
  max-width: 38vh;
  height: 72vh;
-
 }
 
+.heading {
+  text-align: center;
+  width: 100%;
+}
 .content{
   height: 80%;
   display: flex;

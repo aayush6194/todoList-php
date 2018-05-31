@@ -1,4 +1,5 @@
 <?php
+
 class  add extends db {
 
     public function addtask ($task) {

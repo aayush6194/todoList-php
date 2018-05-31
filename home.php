@@ -4,8 +4,8 @@
   include 'includes/view.php';
   include 'includes/add.php';
   include 'includes/components.php';
+  session_start();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,22 +13,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
     <link rel="stylesheet" href="style/main.css">
     <link rel="icon" href="favicon.ico">
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>TODO-LIST</title>
-
-    <style>
-    html, body {height:100vh;}
-    </style>
+    <style> html, body {height:100vh;} </style>
   </head>
-
   <body>
         <div class="wrapper ">
           <div class="container small">
             <?php
             $comp = new components();
-            echo $comp->nav2("Home","Profile");
+            if(isset($_SESSION["login"])){
+              if($_SESSION["login"]){
+                echo $comp->nav2loggedIn("Home","Profile",$_SESSION["name"]);
+              }
+            }
+            else{
+              echo $comp->nav2("Home","Profile");
+            }
             ?>
            <ol class="collapsible">
             <?php
@@ -40,7 +42,7 @@
           </ol>
             <form method="POST">
                  <input type="text" value="" name="task" placeholder="Enter a task...">
-                 <button type="submit" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons right">add</i></button>
+                 <button type="submit" class="btn-floating btn-large waves-effect waves-light red hoverable"><i class="material-icons right">add</i></button>
             </form>
           </div>
         </div>

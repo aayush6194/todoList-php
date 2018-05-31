@@ -5,12 +5,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
     <link rel="stylesheet" href="../style/main.css">
     <link rel="icon" href="favicon.ico">
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>TODO-LIST</title>
@@ -18,7 +16,6 @@
     html, body {height:100vh;}
     </style>
   </head>
-
   <body>
       <div class="wrapper">
           <div class="dummy">
@@ -46,7 +43,6 @@
                       <label for="password">Password</label>
                     </div>
                   </div>
-
                   <div class="row">
                     <div class="col s12">
                 <button class="btn start" type="submit">Log In </button><br><br>
@@ -55,11 +51,8 @@
                           </div>
                     </div>
             </center>
-
         </div>
-
-     <footer   class="page-footer  red lighten-1">  ©  <?php echo date("Y") ?> Copyright Text</footer>
-
+            <footer class="page-footer  red lighten-1">  ©  <?php echo date("Y") ?> Copyright Text</footer>
           </div>
         </div>
       </div>
@@ -69,14 +62,8 @@
         $checking = new authenticate();
         $uname = $_POST['username'];
         $password =  $_POST['password'];
-       $checking->checkUser($uname,$password);
-
+        $checking->checkUser($uname,$password);
       }
-
-
-
-
-
        ?>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

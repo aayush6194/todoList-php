@@ -1,26 +1,35 @@
-html{
-  height: 100vh;
+html, body {
+    height:100%;
 }
+
 body{
-  background: linear-gradient(45deg, rgb(19, 73, 95), rgb(118, 75, 226), rgb(131, 115, 198), rgb(119, 211, 185));
+   background: linear-gradient(45deg, rgb(19, 73, 95), rgb(118, 75, 226), rgb(131, 115, 198), rgb(119, 211, 185));
    background-repeat: no-repeat;
    background-position: center;
    background-size: contain;
 
 }
+a , a:visited{
+  color: white;
 
+}
+.logo{
+  width: 50%;
+  height: auto;
+}
 ol {
     margin-left: 0px;
     padding: 0px;
     font-weight: bold;
-
 }
+
 b{
   display: inline-block;
 }
 .adjust {
   overflow: hidden;
 }
+
 i {
   cursor: pointer;
 }
@@ -28,7 +37,6 @@ i {
 .inline{
   display: inline;
 }
-
 
 .block{
   display: inline-block;
@@ -40,32 +48,48 @@ i {
 
 .wrapper{
   position: relative;
-  height: 96%;
   width: 30vw;
-
   min-width: 320px;
+  max-width: 40vh;
+
   background: white;
   padding: 5px;
   margin: auto;
   border-radius: 5px;
   margin-top: 2%;
-  margin-bottom: 2%;
-
+  margin-bottom: 1%;
+  padding-bottom: 1.5%;
 }
-
-
-
+.modal{
+  display: block;
+}
 .container{
  width: 29vw;
-min-width: 310px;
-
+ min-width: 310px;
+ max-width: 38vh;
+ height: 72vh;
 
 }
 
+.content{
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .btn-floating {
 margin-right: 20px;
+}
+center {
+  width: 100%;
 
+}
+.btn.start{
+  background: #e57373 ;
+  width: 50%;
+  border-radius: 4%;
+  height : 4vh;
 }
 
 .add{
@@ -75,17 +99,33 @@ margin-right: 20px;
 .full {
   width: 100%;
 }
+footer{
+  height: 8.7%;
+
+   position: absolute;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   bottom: 10px;
+   width: 96%
+}
 
 @media screen and (max-width: 650px) {
-
   .wrapper{
     width: 80vw;
-
   }
 
   .container{
    width: 77vw;;
-
   }
 
+}
+
+@media screen and (max-height: 526px) {
+
+  footer{
+    height: 9%;
+
+     bottom: 20px;
+  }
 }

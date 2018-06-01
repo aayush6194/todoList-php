@@ -30,6 +30,9 @@ b{
 .adjust {
   overflow: hidden;
 }
+.option{
+  display: inline;
+}
 
 i {
   cursor: pointer;
@@ -60,6 +63,13 @@ i {
   margin-top: 2%;
   margin-bottom: 1%;
   padding-bottom: 1.5%;
+}
+.scroll{
+  overflow: scroll;
+}
+
+.dropdown-content, .option{
+  color: red;
 }
 .modal{
   display: block;

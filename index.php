@@ -4,7 +4,7 @@
   include 'includes/view.php';
   include 'includes/add.php';
   include 'includes/components.php';
-    session_start();
+  session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,19 +25,21 @@
           <div class="dummy">
           <div class="container small">
             <?php
-            $nav = new components();
-            echo $nav->nav();
+            $index = new components();
+            echo $index->nav();
+            echo "<br>";
+            if(isset($_SESSION['login'])){
+              if($_SESSION['login']){
+                echo $index->indexBody($_SESSION["name"]);
+              }else{
+                  echo $index->indexBody(null);
+              }
+          }
+          else{
+              echo $index->indexBody(null);
+          }
+            echo $index->footer();
             ?>
-             <br>
-            <div class="content red lighten-1">
-              <center>
-              <img src="img1.png" class="materialboxed logo" ><br><br><br>
-              <a href="home.php"><button class="btn start  hoverable">Demo</button></a><br><br>
-              <a href="includes/login-page.php"><button class="btn start  hoverable">Log In</button></a><br><br>
-              <a href="includes/signup-page.php">Sign up now!</a>
-            </center>
-        </div>
-         <footer   class="page-footer  red lighten-1">  ©  <?php echo date("Y") ?> Copyright Text</footer>
           </div>
         </div>
       </div>

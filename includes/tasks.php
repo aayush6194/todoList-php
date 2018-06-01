@@ -5,7 +5,7 @@ class  tasks extends db {
     public function getTasks () {
     if($_SESSION['login'])
     {
-            $sql = "SELECT * FROM todolist ORDER BY id  DESC LIMIT 5 ";
+            $sql = "SELECT * FROM todolist WHERE username='".$_SESSION['email']."' ORDER BY id  DESC LIMIT 5 ";
     }
     else {
         $sql = "SELECT * FROM todolist ORDER BY id  DESC LIMIT 5 ";

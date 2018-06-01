@@ -17,7 +17,14 @@ class components {
                   <li><a class="active" href="index.php">'.$arg1.'</a></li>
                   <li><a href="profile.php">'.$arg2.'</a></li>
                 </ul>
-                <i class="material-icons right">settings</i>
+                <ul id = "dropdown" class = "dropdown-content right" >
+                   <li><a href = "#" style="color:red;">Task</a></li>
+                   <li><a href = "includes/login-page.php" style="color:red;">Sign In</a></li>
+                    <li><a href = "includes/signup-page.php" style="color:red;">Sign Up</a></li>
+                </ul>
+                <a class = "dropdown-button right" href = "#" data-activates = "dropdown">
+                <i class = "mdi-navigation-arrow-drop-down material-icons right">settings</i></a>
+
               </div>
             </nav>
           </header>';
@@ -31,13 +38,17 @@ class components {
                   <li><a href="index.php" >'.$arg1.'</a></li>
                   <li><a href="profile.php">'.$arg2.'</a></li>
                 </ul>
-                <i class="material-icons right">settings</i>
+                <ul id = "dropdown" class = "dropdown-content right">
+                   <li><a href = "#" style="color:red;" class="option">Task</a></li>
+                   <li><a style="color:red;" href="includes/logout.php">Log Out</a></li>
+                </ul>
+                <a class = "dropdown-button right"  data-activates = "dropdown">
+                <i class = "material-icons right">settings</i></a></a>
                 <span class="right">Hello, '.ucfirst($name).'!</span>
               </div>
             </nav>
           </header>';
   }
-
 
   public function search(){
     return '  <form action="includes/search.php">
@@ -48,5 +59,29 @@ class components {
                 </div>
               </form>';
   }
+
+  public function indexBody($user){
+    if($user == null){
+    return '<div class="content red lighten-1">
+                  <center>
+                    <img src="img1.png" class="materialboxed logo" ><br><br><br>
+                    <a href="home.php"><button class="btn start  hoverable">Demo</button></a><br><br>
+                    <a href="includes/login-page.php"><button class="btn start  hoverable">Log In</button></a><br><br>
+                    <a href="includes/signup-page.php">Sign up now!</a>
+                  </center>
+              </div>';}
+    else{
+      return '<div class="content red lighten-1">
+                    <center>
+                      <img src="img1.png" class="materialboxed logo" ><br><br><br>
+                      <a href="includes/logout.php"><button class="btn start  hoverable truncate">Log Out as '.$user.'</button></a><br><br>
+                      <a href="includes/signup-page.php">Sign up as new user!</a>
+                    </center>
+                </div>';
+    }
+  }
+  public function footer(){
+      return '<footer class="page-footer  red lighten-1">  © '. date("Y"). ' Copyright </footer>';
+}
 }
  ?>

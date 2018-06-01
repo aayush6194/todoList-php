@@ -11,6 +11,8 @@
   <head>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
     <link rel="stylesheet" href="style/main.css">
     <link rel="icon" href="favicon.ico">
     <meta charset="UTF-8">
@@ -21,11 +23,15 @@
   <body>
         <div class="wrapper ">
           <div class="container small">
-            <?php
+
+          <?php
             $comp = new components();
             if(isset($_SESSION["login"])){
               if($_SESSION["login"]){
                 echo $comp->nav2loggedIn("Home","Profile",$_SESSION["name"]);
+              }
+              else {
+                  echo $comp->nav2("Home","Profile");
               }
             }
             else{
@@ -46,13 +52,10 @@
             </form>
           </div>
         </div>
-
-
         <?php
         if(isset($_POST['task'])){
-        if(strlen($_POST['task']) >= 5)
-        {  $task = $_POST['task'];
-
+        if(strlen($_POST['task']) >= 5){
+            $task = $_POST['task'];
            $users = new add();
            $users->addtask($task);
          }
@@ -66,11 +69,6 @@
          }
         }
          ?>
-
- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-
+         <script></script>
   </body>
 </html>

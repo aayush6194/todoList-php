@@ -9,6 +9,7 @@ class sessionCreator {
 
   public static function loggedOut (){
     $_SESSION["name"] = null;
+      $_SESSION["email"] = null;
     $_SESSION["login"] = false;
   }
 

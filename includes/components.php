@@ -77,11 +77,25 @@ class components {
                       <a href="includes/logout.php"><button class="btn start  hoverable truncate">Log Out as '.$user.'</button></a><br><br>
                       <a href="includes/signup-page.php">Sign up as new user!</a>
                     </center>
+
                 </div>';
     }
   }
   public function footer(){
       return '<footer class="page-footer  red lighten-1">  © '. date("Y"). ' Copyright </footer>';
 }
+
+
+  public function warningModal($message, $name, $button){
+    return "<div id='".$name."' class='modal'>
+       <div class='modal-content'>
+         <h4>Warning!</h4>
+         <p>".$message."</p>
+       </div>
+        <div class='modal-footer'>
+        <a href='#!' class='modal-action modal-close waves-effect red btn-flat'>".$button."</a>
+           </div>
+     </div>";
+  }
 }
  ?>

@@ -21,9 +21,9 @@
     </style>
   </head>
   <body>
-      <div class="wrapper">
+      <div class="wrapper blue lighten-5">
           <div class="dummy">
-          <div class="container small">
+          <div class="container small ">
             <?php
             $index = new components();
             echo $index->nav();

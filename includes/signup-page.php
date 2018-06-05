@@ -29,7 +29,7 @@
             ?>
              <br>
             <div class="content">
-              <center class="">
+              <center class="height-full">
                 <form class="col s12" method="POST">
                   <div class="row">
                     <div class="col s6">
@@ -57,9 +57,9 @@
                   </div>
                   <div class="row">
                     <div class="col s12">
-                      <button class="btn start" type="submit">Submit</button><br><br>
+                      <button class="btn start  col s5" type="submit">Submit</button>
                   </form>
-                      <a href="../index.php?s=cs" class="btn start">Go Back</a><br><br>
+                      <a href="../index.php?s=cs" class="btn start col s5 right">Go Back</a>
                     </div>
                   </div>
             </center>
@@ -68,6 +68,7 @@
           </div>
         </div>
       </div>
+
       <?php
         $added = false;
         if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['firstname']) && isset($_POST['lastname'])){

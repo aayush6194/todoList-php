@@ -12,7 +12,6 @@ class sessionCreator {
       $_SESSION["email"] = null;
     $_SESSION["login"] = false;
   }
-
 }
 
 ?>

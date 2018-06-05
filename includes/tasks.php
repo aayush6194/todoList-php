@@ -1,18 +1,20 @@
 <?php
-
 class  tasks extends db {
-
     public function getTasks () {
-    if($_SESSION['login'])
-    {
-            $sql = "SELECT * FROM todolist WHERE username='".$_SESSION['email']."' ORDER BY id  DESC LIMIT 5 ";
+    if(isset($_SESSION['login'])){
+      if($_SESSION['login'])
+      {
+                    $sql = "SELECT * FROM todolist WHERE username='".$_SESSION['email']."' ORDER BY id  DESC LIMIT 5 ";
+                  }
+      else{
+          $sql = "SELECT * FROM todolist ORDER BY id  DESC LIMIT 5 ";
+      }
     }
     else {
         $sql = "SELECT * FROM todolist ORDER BY id  DESC LIMIT 5 ";
     }
 
         $result = $this->connect()->query($sql);
-
         $numRows = $result->num_rows;
 
         if($numRows > 0){

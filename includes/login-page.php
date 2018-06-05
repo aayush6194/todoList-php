@@ -12,7 +12,7 @@
 
     <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>TODO-LIST</title>
-    
+
     <style>html, body {height:100vh;}</style>
   </head>
   <body>
@@ -25,29 +25,31 @@
             ?>
              <br>
             <div class="content">
-              <center>
-                <form class="col s12" method="POST">
+              <center class="height-full">
+                <form class="col s11 height-full" method="POST">
                 <div class="row">
-
-                  <div class="row">
-                    <div class="input-field col s12">
+                  <div class="row col s11">
+                    <div class="input-field ">
                       <input id="email" type="email" class="validate" name="username" value="">
                       <label for="email">Email</label>
                     </div>
                   </div>
                 </div>
                   <div class="row">
-                    <div class="input-field col s12">
+                  <div class="row col s11">
+                    <div class="input-field ">
                       <input id="password" type="password" class="validate" name="password" value="">
                       <label for="password">Password</label>
                     </div>
                   </div>
+                  </div>
                   <div class="row">
-                    <div class="col s12">
-                <button class="btn start" type="submit">Log In </button><br><br>
+                    <div class="col s12 ">
+                <button class="btn start col s5" type="submit">Log In </button>
+                <a href="../index.php?s=cs" class="btn start col s5 right">Go Back</a>
+                    </div>
                   </form>
-                      <a href="../index.php?s=cs" class="btn start">Go Back</a><br><br>
-                          </div>
+
                     </div>
             </center>
         </div>

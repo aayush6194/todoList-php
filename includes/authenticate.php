@@ -17,7 +17,9 @@ class  authenticate extends db {
           $_SESSION["name"] = $data['name'];
           $_SESSION["email"] = $data['user'];
           $_SESSION["login"] = true;
-          echo "<script>alert('Logging in! Welcome ".$data['name']."'); window.location='http://localhost:8181/todoList-php/home.php'</script>";
+          echo "<script>alert('Logging in! Welcome ".$data['name']."'); </script>";
+          header("location: http://localhost:8181/todoList-php/home.php");
+
         }
         else{
           echo "<script>alert('Incorrect username or password!'); window.location=''</script>";

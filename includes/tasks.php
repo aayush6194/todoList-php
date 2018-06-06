@@ -27,23 +27,23 @@ class  tasks extends db {
           return false;
         }
     }
-    // public function getTasksNum () {
-    //   if($_SESSION['login']){
-    //       if($_SESSION['login']){
-    //         $sql2 = "SELECT * FROM todolist WHERE username='".$_SESSION['email']."' ORDER BY id  DESC ";
-    //       }
-    //       else{
-    //         $sql2 = "SELECT * FROM todolist ORDER BY id";
-    //       }
-    // }
-    // else {
-    //     $sql2 = "SELECT * FROM todolist ORDER BY id";
-    // }
-    //
-    //     $numRsults = ($this->connect()->query($sql2))->num_rows;
-    //     return $numRsults;
-    //
-    // }
+    public function getTasksNum () {
+      if($_SESSION['login']){
+          if($_SESSION['login']){
+            $sql2 = "SELECT * FROM todolist WHERE username='".$_SESSION['email']."' ORDER BY id  DESC ";
+          }
+          else{
+            $sql2 = "SELECT * FROM todolist ORDER BY id";
+          }
+    }
+    else {
+        $sql2 = "SELECT * FROM todolist ORDER BY id";
+    }
+
+        $numResults = ($this->connect()->query($sql2))->num_rows;
+        return $numResults;
+
+    }
 }
 
 

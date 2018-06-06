@@ -47,8 +47,8 @@
             <div class="collection" >
              <a href="home.php" class="collection-item"><span class="badge">
                <?php
-                //$taskNum = new tasks();
-              //  echo $taskNum->getTasksNum();
+                $taskNum = new tasks();
+                echo $taskNum->getTasksNum();
               ?>
               </span>Tasks</a>
              <a href="#!" class="collection-item"><span class="badge "><?php if(isset($_SESSION['email'])){echo $_SESSION['email'];} ?></span>Email:</a>

@@ -52,7 +52,10 @@
                     <div class="input-field center">
                       <input id="password" type="password" class="validate" name="password" value="">
                       <label for="password">Password</label>
+
                     </div>
+                    <label for="warning" class="left">Password should be 8 character long.<br>
+                    </label><br>
                   </div>
                   </div>
                   <div class="row">
@@ -80,19 +83,28 @@
 
           $adding->addUser($uname,  $password, $fname);
           if(!$adding->existsUser($uname)){
+            if(strlen($_POST['password']) >= 8)
+            {
            $added = $adding->addUser($uname,  $password, $fname);
          }
+         else{
+              echo "<script>alert('failed! Password needs to be atleast 8 characters long.');</script>";
+         }
+         }
           else{
-             echo "<script>alert('failed!');</script>";
+             echo "<script>alert('failed! Email Already Exists');</script>";
+         }
+
+         if($added){
+           $added = false;
+           $_SESSION["name"] = $_POST['firstname'];
+           $_SESSION["email"] = $_POST['user'];
+           $_SESSION["login"] = true;
+           echo "<script>alert('Creating your account! Welcome ".$_SESSION["name"]."');";
+           header("location: ../home.php");
          }
         }
-        if($added){
-          $added = false;
-          $_SESSION["name"] = $_POST['firstname'];
-          $_SESSION["email"] = $_POST['user'];
-          $_SESSION["login"] = true;
-          echo "<script>alert('Creating your account! Welcome ".$_SESSION["name"]."'); window.location='http://localhost:8181/todoList-php/home.php'</script>";
-        }
+
        ?>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

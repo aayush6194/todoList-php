@@ -21,9 +21,8 @@
     <style> html, body {height:100vh;} </style>
   </head>
   <body>
-        <div class="wrapper">
-          <div class="container small">
-
+        <div class="wrapper ">
+          <div class="container small ">
           <?php
             $comp = new components();
             echo $comp->warningModal("The task must be at least 3 character long!", "modal1","agree");
@@ -51,18 +50,17 @@
           </ol>
 
             <form method="POST" class="row">
-  <div class="row col s12">
               <div class="row col s12">
-                <div class="input-field col s9">
-                  <input type="text" class="data data-task" value="" name="task" placeholder="Enter a task...">
-                  </div>
-                  <div class="input-field col s2" >
-                  <button  class="btn data data-date red " id="setDate"> <i class="material-icons">perm_contact_calendar</i></button>
-                  <input type="hidden" class="datepicker" name="date">
+                <div class="row col s12">
+                  <div class="input-field col s9">
+                    <input type="text" class="data data-task" value="" name="task" placeholder="Enter a task...">
+                    </div>
+                    <div class="input-field col s2" >
+                    <button  class="btn data data-date red " id="setDate"> <i class="material-icons">perm_contact_calendar</i></button>
+                    <input type="hidden" class="datepicker" name="date">
+                    </div>
                   </div>
                 </div>
-
-  </div>
                  <button type="submit"  class="btn-floating sha btn-large waves-effect waves-light red hoverable right"><i class="material-icons right">add</i></button>
                  <input type="hidden" class="modal-trigger modal1"  href="#modal1">
                  <input type="hidden" class="modal-trigger modal2"  href="#modal2">
@@ -84,7 +82,7 @@
                    }
            $users = new add();
            $users->addtask($task, $date);
-
+           header("Refresh:0");
          }
          else{
            echo "<script>  setTimeout(()=>{ $('.modal-trigger.modal1').click()}, 100);</script>";

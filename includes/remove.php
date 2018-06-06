@@ -1,8 +1,5 @@
 <?php
-
 include "db-inc.php";
-
-
 class  remove extends db {
 
     public function removetask ($task) {
@@ -16,7 +13,7 @@ function mains (){
   $task = $_GET['taskselected'];
   $removetask = new remove();
   $removetask->removetask($task);
-  echo "<script>window.location = 'http://localhost:8181/todoList-php/home.php';</script>";
+  header("location: ../home.php");
 }
 
 mains();

@@ -15,10 +15,10 @@ class  authenticate extends db {
           // $login->loggedIn($data['name']);
 
           $_SESSION["name"] = $data['name'];
-          $_SESSION["email"] = $data['user'];
+          $_SESSION["email"] = $data['username'];
           $_SESSION["login"] = true;
           echo "<script>alert('Logging in! Welcome ".$data['name']."'); </script>";
-          header("location: http://localhost:8181/todoList-php/home.php");
+          header("location: ../home.php");
 
         }
         else{

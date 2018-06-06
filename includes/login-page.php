@@ -62,6 +62,7 @@
         $checking = new authenticate();
         $uname = $_POST['username'];
         $password =  $_POST['password'];
+        
         $checking->checkUser($uname,$password);
       }
        ?>

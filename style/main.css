@@ -14,8 +14,18 @@ a , a:visited{
 }
 
 
-.data{
-
+.mini-pic{
+  width: 70%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mini-block{
+  height: 3%;
+}
+.nostyle{
+  list-style: none;
 }
 
 button{

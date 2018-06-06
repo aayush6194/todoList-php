@@ -15,10 +15,10 @@ class  add extends db {
       }else{
       $username ="'demo'";
     }
-    
+
         $sql = "INSERT INTO todolist (username, task, date) VALUES (".$username.",".$task.$date.")";
         $result = $this->connect()->query($sql);
-
+        
     }
 }
 ?>

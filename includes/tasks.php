@@ -39,10 +39,18 @@ class  tasks extends db {
     else {
         $sql2 = "SELECT * FROM todolist ORDER BY id";
     }
-
-        $numResults = ($this->connect()->query($sql2))->num_rows;
-        return $numResults;
-
+        $num = 0;
+        $numResults = ($this->connect()->query($sql2));
+        try{
+        if($numResults){
+        $num =  $numResults->num_rows;
+        }
+        return $num;
+      }
+      catch (Exception $x)
+      {
+        return 0;
+      }
     }
 }
 

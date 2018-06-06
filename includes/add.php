@@ -1,24 +1,14 @@
 <?php
 class  add extends db {
 
-    public function addtask ($task, $date) {
+    public function addtask ($task, $date, $email) {
       $task = "'" .$task ."', ";
       $date = "'" .$date ."'";
-      if(isset($_SESSION["login"])){
+      $email ="'".$email."'";
 
-          if($_SESSION["login"]){
-            $username ="'".$_SESSION["name"]."'";
-
-          }else{
-              $username ="'demo'";
-          }
-      }else{
-      $username ="'demo'";
-    }
-
-        $sql = "INSERT INTO todolist (username, task, date) VALUES (".$username.",".$task.$date.")";
+        $sql = "INSERT INTO todolist (username, task, date) VALUES (".$email.",".$task.$date.")";
         $result = $this->connect()->query($sql);
-        
+
     }
 }
 ?>

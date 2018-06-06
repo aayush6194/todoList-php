@@ -23,6 +23,8 @@
   <body>
         <div class="wrapper ">
           <div class="container small ">
+
+
           <?php
             $comp = new components();
             echo $comp->warningModal("The task must be at least 3 character long!", "modal1","agree");
@@ -80,9 +82,18 @@
                 echo "<script> setTimeout(()=>{ $('.modal-trigger.modal2').click();}, 100);</script>";
            $date =  "";
                    }
+
            $users = new add();
-           $users->addtask($task, $date);
-           header("Refresh:0");
+           $email= "demo";
+
+           if(isset($_SESSION["email"])){
+             if($_SESSION["email"] != null){
+               $email = $_SESSION["email"];
+             }
+           }
+
+           $users->addtask($task, $date, $email);
+        //   header("Refresh:0");
          }
          else{
            echo "<script>  setTimeout(()=>{ $('.modal-trigger.modal1').click()}, 100);</script>";
@@ -93,11 +104,9 @@
            <script>
           //  var dateBtn = document.getElementById("datebtn");
           //  var date = document.getElementById("date");
-
           //dateBtn.addEventListener("click", ()=>{
           //event.preventDefault();
           //    setTimeout(()=>{date.click()});});
-
           $(document).ready(function(){
             $('.modal').hide();
             $('.modal-trigger').leanModal();

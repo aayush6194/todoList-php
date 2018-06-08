@@ -27,7 +27,6 @@
           <div class="container small ">
             <?php
               $comp = new components();
-
               if(isset($_SESSION["login"])){
                 if($_SESSION["login"]){
                   echo $comp->nav3loggedIn("Home","Tasks",$_SESSION["name"]);
@@ -52,19 +51,16 @@
               ?>
               </span>Tasks</a>
              <a href="#!" class="collection-item"><span class="badge "><?php if(isset($_SESSION['email'])){echo $_SESSION['email'];} ?></span>Email:</a>
-             <a href="#!" class="collection-item"><span class="badge">Change</span>Password</a>
+             <a href="#!" class="collection-item"><span class="badge"><form action="includes/change-page.php"><input  type="submit" class="bt-small" value="Change" ></button ></form></span>Password</a>
              <a href="#!" class="collection-item"><span class="badge">1.0.0</span>Version</a>
-
            </div>
            <?php
            $profile = new components();
-
            echo $profile->footer();
            ?>
           </div>
         </div>
       </div>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
   </body>

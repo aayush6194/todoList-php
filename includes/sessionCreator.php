@@ -1,5 +1,4 @@
 <?php
-
 class sessionCreator {
 
   public static function loggedIn ($name){

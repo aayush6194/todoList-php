@@ -17,12 +17,12 @@ class components {
                   <li><a class="active" href="index.php">'.$arg1.'</a></li>
                   <li><a href="profile.php">'.$arg2.'</a></li>
                 </ul>
-                <ul id = "dropdown" class = "dropdown-content right" >
+                <ul id = "dropdown" class = "dropdown-content left lefty" >
                    <li><a href = "#" style="color:red;">Task</a></li>
                    <li><a href = "includes/login-page.php" style="color:red;">Sign In</a></li>
                     <li><a href = "includes/signup-page.php" style="color:red;">Sign Up</a></li>
                 </ul>
-                <a class = "dropdown-button right" href = "#" data-activates = "dropdown">
+                <a class = "dropdown-button right bt red lighten-1" href = "#" data-activates = "dropdown">
                 <i class = "mdi-navigation-arrow-drop-down material-icons right">settings</i></a>
 
               </div>
@@ -38,12 +38,12 @@ class components {
                   <li><a class="active" href="index.php">'.$arg1.'</a></li>
                     <li><a href="home.php">'.$arg2.'</a></li>
                     </ul>
-                    <ul id = "dropdown" class = "dropdown-content right" >
+                    <ul id = "dropdown" class = "dropdown-content left lefty" >
                        <li><a href = "#" style="color:red;">Task</a></li>
                        <li><a href = "includes/login-page.php" style="color:red;">Sign In</a></li>
                         <li><a href = "includes/signup-page.php" style="color:red;">Sign Up</a></li>
                     </ul>
-                    <a class = "dropdown-button right" href = "#" data-activates = "dropdown">
+                    <a class = "dropdown-button right bt red lighten-1" href = "#" data-activates = "dropdown">
                     <i class = "mdi-navigation-arrow-drop-down material-icons right">settings</i></a>
 
                   </div>
@@ -59,11 +59,11 @@ class components {
                   <li><a href="index.php" >'.$arg1.'</a></li>
                   <li><a href="profile.php">'.$arg2.'</a></li>
                 </ul>
-                <ul id = "dropdown" class = "dropdown-content right">
+                <ul id = "dropdown" class = "dropdown-content left lefty">
                    <li><a href = "#" style="color:red;" class="option">Task</a></li>
                    <li><a style="color:red;" href="includes/logout.php">Log Out</a></li>
                 </ul>
-                <a class = "dropdown-button right"  data-activates = "dropdown">
+                <a class = "dropdown-button bt right"  data-activates = "dropdown">
                 <i class = "material-icons right">settings</i></a></a>
                 <span class="right">Hello, '.ucfirst($name).'!</span>
               </div>
@@ -128,15 +128,15 @@ class components {
 
 
   public function warningModal($message, $name, $button){
-    return "<div id='".$name."' class='modal'>
-       <div class='modal-content'>
-         <h4>Warning!</h4>
-         <p>".$message."</p>
-       </div>
-        <div class='modal-footer'>
-        <a href='#!' class='modal-action modal-close waves-effect red btn-flat'>".$button."</a>
-           </div>
-     </div>";
+    return "<div id='".$name."' class='modal small'>
+             <div class='modal-content '>
+               <h4>Warning!</h4>
+               <p>".$message."</p>
+             </div>
+              <div class='modal-footer'>
+                <a href='#!' class='modal-action modal-close waves-effect red btn-flat'>".$button."</a>
+              </div>
+           </div>";
   }
 }
  ?>

@@ -5,7 +5,6 @@ function logout(){
   $_SESSION["email"] = null;
   $_SESSION["login"] = false;
   header("location: ../index.php");
-  
 }
 
 logout();

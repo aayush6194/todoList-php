@@ -23,8 +23,6 @@
   <body>
         <div class="wrapper ">
           <div class="container small ">
-
-
           <?php
             $comp = new components();
             echo $comp->warningModal("The task must be at least 3 character long!", "modal1","agree");
@@ -50,7 +48,6 @@
               $tasks->showTasks();
               ?>
           </ol>
-
             <form method="POST" class="row">
               <div class="row col s12">
                 <div class="row col s12">
@@ -91,7 +88,6 @@
                $email = $_SESSION["email"];
              }
            }
-
            $users->addtask($task, $date, $email);
         //   header("Refresh:0");
          }
@@ -100,7 +96,6 @@
          }
         }
          ?>
-
            <script>
           //  var dateBtn = document.getElementById("datebtn");
           //  var date = document.getElementById("date");
@@ -119,6 +114,5 @@
               setTimeout(()=>{$(".datepicker").click();}, 100);
           });
      </script>
-
   </body>
 </html>

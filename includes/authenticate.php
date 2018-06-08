@@ -13,13 +13,11 @@ class  authenticate extends db {
           $data = $result->fetch_assoc();
           // $login = new sessionCreator();
           // $login->loggedIn($data['name']);
-
           $_SESSION["name"] = $data['name'];
           $_SESSION["email"] = $data['username'];
           $_SESSION["login"] = true;
           echo "<script>alert('Logging in! Welcome ".$data['name']."'); </script>";
           header("location: ../home.php");
-
         }
         else{
           echo "<script>alert('Incorrect username or password!'); window.location=''</script>";
